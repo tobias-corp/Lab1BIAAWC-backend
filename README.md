@@ -2,6 +2,7 @@
 Flask web app with two endpoints with html frontend
 
 Paste to app.py at the end to do test run:
+
 if __name__ == '__main__':
     app.run()
 

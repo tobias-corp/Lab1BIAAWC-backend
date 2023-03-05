@@ -21,7 +21,7 @@ def greet(name):
     """
     Renders a personalized greeting to the user.
     """
-    return 'Hello, {}!'.format(name)
+    return f'Hello, {name}!'
 
 
 @app.route('/static/<path:path>')

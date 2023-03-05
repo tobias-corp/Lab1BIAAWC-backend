@@ -1,13 +1,16 @@
-# Lab1BIAAWC-backend
-Flask web app with two endpoints with html frontend
+# Flask Web App
 
-Paste to app.py at the end to do test run:
+A simple Flask web app for greeting users and serving static files of frontend.
 
-if __name__ == '__main__':
-    app.run()
+## Getting Started
 
-to go to '/' endpoint use url: http://127.0.0.1:5000/
+1. Clone the repository.
+2. Install the requirements: `pip install -r requirements.txt`.
+3. Run the app: `python app.py`.
+4. Navigate to `http://localhost:5000` in your web browser to view the app.
 
-to go to '/greet/<name>' endpoint use url: http://127.0.0.1:5000/greet/<here write your name>
+## Routes
 
-to go to frontend html page '/static/index.html' endpoint use url: http://127.0.0.1:5000/static/index.html
+- `/`: Renders a simple greeting to the user.
+- `/greet/<name>`: Renders a personalized greeting to the user.
+- `/static/<path:path>`: Serves a static frontend file from the `static` directory.

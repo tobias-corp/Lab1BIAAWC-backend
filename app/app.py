@@ -13,7 +13,7 @@ def index():
     """
     Renders a simple greeting to the user.
     """
-    return f'Hello, World!'
+    return 'Hello, World!'
 
 
 @app.route('/greet/<name>')
@@ -21,7 +21,7 @@ def greet(name):
     """
     Renders a personalized greeting to the user.
     """
-    return f'Hello, {name}!'
+    return 'Hello, {}!'.format(name)
 
 
 @app.route('/static/<path:path>')

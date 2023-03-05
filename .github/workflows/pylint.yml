@@ -1,8 +1,15 @@
+name: pylint
+on:
+  push:
+    branches:
+      - main
 jobs:
-  pylint:
-    name: "Pylint"
-    language: python
-    install:
-      - pip install pylint pylint-flask
-    script:
-      - pylint --load-plugins=pylint_flask app/
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Test app
+        run: |
+          pylint --load-plugins=pylint_flask app/
+

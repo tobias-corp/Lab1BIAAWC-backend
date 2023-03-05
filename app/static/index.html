@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Flask Frontend Example</title>
+  </head>
+  <body>
+    <h1>Flask Frontend Example</h1>
+    <p>Enter your name:</p>
+    <form id="greet-form">
+      <input type="text" name="name" id="name-input">
+      <button type="submit">Greet</button>
+    </form>
+    <div id="greet-output"></div>
+    <script>
+      const greetForm = document.getElementById('greet-form');
+      const nameInput = document.getElementById('name-input');
+      const greetOutput = document.getElementById('greet-output');
+
+      greetForm.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        const response = await fetch(`/greet/${nameInput.value}`);
+        const greeting = await response.text();
+        greetOutput.textContent = greeting;
+      });
+    </script>
+  </body>
+</html>

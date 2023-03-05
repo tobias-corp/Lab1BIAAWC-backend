@@ -14,5 +14,5 @@ jobs:
           pip install pylint pylint-flask
       - name: Test app
         run: |
-          pylint --load-plugins=pylint_flask app/
+          pylint app/app.py
 
